@@ -1,0 +1,11 @@
+def is_vowel(letter):
+    return letter in ["a", "e", "i", "o", "u"]
+
+
+def score_vowel(sentence):
+    score = 0
+    for word in sentence:
+        score+= sum(1 for letter in word if is_vowel(letter))
+    return score
+
+print(score_vowel('python is an interesting language to learn'))
